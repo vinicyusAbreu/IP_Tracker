@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IP Tracker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>IP Address Tracker</h1>
+        <div>
+            <input id="ipInput" type="text" placeholder="Search for any IP address or domain">
+
+            <button id="btn">
+                <img src="img/icon-arrow.svg" alt="seta">
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class='container'>
+
+            <div class='box'>
+                <p>IP Address</p>
+                <span class='IP'></span>
+            </div class='box'>
+
+            <div class='box'>
+                <p>Location</p>
+                <span class="location"></span>
+            </div>
+
+            <div class='box'>
+                <p>timezone</p>
+                <span class="timezone"></span>
+            </div>
+
+            <div class='box'>
+                <p>ISP</p>
+                <span class="isp"></span>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <div id="mapid"></div>
+
+    <script src="js/app.js" async defer type='module' charset="utf-8"></script>
+
+    <div class="containerLoading">
+        <div class="spinner"></div>
+    </div>
+
+</body>
+
+
+</html>
